@@ -14,13 +14,13 @@ namespace Framework.Header
         }
 
         //Elements
-        public static string Logo = "navbar-brand";
+        private readonly static string Logo = "navbar-brand";
 
-        public static string Home = "//a[@class='nav-link'][contains(text(),'Home')]";
-        public static string AboutUs = "//a[@class='nav-link'][text()='About Us']";
-        public static string BlogEntries = "//a[@class='nav-link'][text()='Blog Entries']";
-        public static string PostDetails = "//a[@class='nav-link'][text()='Post Details']";
-        public static string ContactUs = "//a[@class='nav-link'][text()='Contact Us']";
+        private readonly static string Home = "//a[@class='nav-link'][contains(text(),'Home')]";
+        private readonly static string AboutUs = "//a[@class='nav-link'][text()='About Us']";
+        private readonly static string BlogEntries = "//a[@class='nav-link'][text()='Blog Entries']";
+        private readonly static string PostDetails = "//a[@class='nav-link'][text()='Post Details']";
+        private readonly static string ContactUs = "//a[@class='nav-link'][text()='Contact Us']";
 
 
         //Assertions
@@ -30,11 +30,11 @@ namespace Framework.Header
             try
             {
                 Assert.IsTrue(element.Displayed);
-                Console.WriteLine($"Logo is displayed correctly.");
+                Console.WriteLine("Logo is displayed correctly.");
             }
             catch (Exception)
             {
-                Console.WriteLine($"Logo is not displayed.");
+                Console.WriteLine("Logo is not displayed.");
             }
         }
         public void CheckIfHomeButtonIsDisplayed()

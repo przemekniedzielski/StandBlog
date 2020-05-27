@@ -60,9 +60,7 @@
     <Compile Include="Utils\Helpers.cs" />
     <Compile Include="Utils\Settings.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Header\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
