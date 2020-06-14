@@ -34,7 +34,7 @@ namespace Framework.Header
             }
             catch (Exception)
             {
-                Console.WriteLine("Logo is not displayed.");
+                Console.WriteLine("Something went wrong. Logo is not displayed correctly.");
             }
         }
         public void CheckIfHomeButtonIsDisplayed()
@@ -47,7 +47,7 @@ namespace Framework.Header
             }
             catch (Exception)
             {
-                Console.WriteLine($"{element.Text} is not displayed.");
+                Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
         public void CheckIfAboutUsButtonIsDisplayed()
@@ -60,7 +60,7 @@ namespace Framework.Header
             }
             catch (Exception)
             {
-                Console.WriteLine($"{element.Text} is not displayed.");
+                Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
         public void CheckIfBlogEntriesButtonIsDisplayed()
@@ -73,7 +73,7 @@ namespace Framework.Header
             }
             catch (Exception)
             {
-                Console.WriteLine($"{element.Text} is not displayed.");
+                Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
         public void CheckIfPostDetailsButtonIsDisplayed()
@@ -86,7 +86,7 @@ namespace Framework.Header
             }
             catch (Exception)
             {
-                Console.WriteLine($"{element.Text} is not displayed.");
+                Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
         public void CheckIfContactUsButtonIsDisplayed()
@@ -99,7 +99,7 @@ namespace Framework.Header
             }
             catch (Exception)
             {
-                Console.WriteLine($"{element.Text} is not displayed.");
+                Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
     }
