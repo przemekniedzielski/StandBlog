@@ -1,6 +1,6 @@
-﻿using Framework.Utils;
-using NUnit.Framework;
-using static Framework.Header.Header;
+﻿using NUnit.Framework;
+using Framework;
+using static Framework.Header;
 using static Framework.Pages.AboutUsPage;
 
 namespace Tests

@@ -1,9 +1,8 @@
-﻿using Framework.Utils;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 
-namespace Framework.Header
+namespace Framework
 {
     public class Header : Settings
     {

@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
-using Framework.Utils;
-using static Framework.Header.Header;
+using Framework;
+using static Framework.Header;
 
 namespace Tests
 {

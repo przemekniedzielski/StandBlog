@@ -1,5 +1,4 @@
-﻿using Framework.Utils;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 
@@ -18,10 +17,10 @@ namespace Framework.Pages
         private readonly static string search = "search_form";
 
         //Methods
-
         public static void GoToDownloadTemplatePage()
         {
             driver.FindElement(By.XPath(downloadTemplateButton)).Click();
+            Console.WriteLine("Going to 'Download template' page.");
         }
 
         //Assertions

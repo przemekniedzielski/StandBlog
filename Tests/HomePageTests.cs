@@ -1,5 +1,5 @@
-﻿using Framework.Utils;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using Framework;
 using static Framework.Pages.HomePage;
 
 namespace Tests
