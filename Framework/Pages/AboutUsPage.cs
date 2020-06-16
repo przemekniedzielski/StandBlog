@@ -8,6 +8,7 @@ namespace Framework.Pages
     {
         //Elements
         private readonly static string titleInBanner = "//section[@class='page-heading']//h4";
+        private readonly static string moreInfoInBanner = "//section[@class='page-heading']//h2";
         private readonly static string aboutUsImage = "//section[@class='about-us']//img";
 
         //Methods
@@ -24,6 +25,20 @@ namespace Framework.Pages
             catch (Exception)
             {
                 Console.WriteLine("Something went wrong. About us page is not displayed.");
+            }
+        }
+
+        public static void CheckIfMoreAboutUsTextIsDisplayed()
+        {
+            IWebElement element = driver.FindElement(By.XPath(moreInfoInBanner));
+            try
+            {
+                Assert.AreEqual(element.Text, "MORE ABOUT US!");
+                Console.WriteLine($"Text on banner is displayed correctly and equals '{element.Text}'.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong. Text on banner is not correct.");
             }
         }
 

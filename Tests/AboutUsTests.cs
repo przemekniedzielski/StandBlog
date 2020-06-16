@@ -10,15 +10,22 @@ namespace Tests
         [Test]
         public void CheckIfAboutUsPageIsDisplayedTest()
         {
-            ClickAboutUsButtonInHeader();
+            ClickAboutUsButtonOnMenu();
             CheckIfAboutUsPageIsDisplayed();
         }
 
         [Test]
         public void CheckIfImageInAboutUsPageIsDisplayedTest()
         {
-            ClickAboutUsButtonInHeader();
+            ClickAboutUsButtonOnMenu();
             CheckIfImageInAboutUsPageIsDisplayed();
+        }
+
+        [Test]
+        public void CheckIfMoreAboutUsTextIsDisplayedTest()
+        {
+            ClickAboutUsButtonOnMenu();
+            CheckIfMoreAboutUsTextIsDisplayed();
         }
     }
 }

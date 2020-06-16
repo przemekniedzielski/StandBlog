@@ -16,13 +16,13 @@ namespace Framework
         private readonly static string ContactUs = "//a[@class='nav-link'][text()='Contact Us']";
 
         //Methods
-        public static void ClickHomeButtonInHeader()
+        public static void ClickHomeButtonOnMenu()
         {
             driver.FindElement(By.XPath(Home)).Click();
             Console.WriteLine("Going to 'Home' page.");
         }
 
-        public static void ClickAboutUsButtonInHeader()
+        public static void ClickAboutUsButtonOnMenu()
         {
             driver.FindElement(By.XPath(AboutUs)).Click();
             Console.WriteLine("Going to 'About us' page.");
