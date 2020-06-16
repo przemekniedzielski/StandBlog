@@ -1,48 +1,46 @@
 ﻿using NUnit.Framework;
-using Framework.Pages;
 using Framework.Utils;
-using Framework.Header;
+using static Framework.Header.Header;
 
 namespace Tests
 {
     public class HeaderTests : Settings
     {
-        Header headerPage => new Header(driver);
 
         [Test]
-        public void CheckIfLogoIsDisplayed()
+        public void CheckIfLogoIsDisplayedTest()
         {
-            headerPage.CheckIfLogoIsDisplayed();
+            CheckIfLogoIsDisplayed();
         }
 
         [Test]
-        public void CheckIfHomeButtonIsDisplayed()
+        public void CheckIfHomeButtonIsDisplayedTest()
         {
-            headerPage.CheckIfHomeButtonIsDisplayed();
+            CheckIfHomeButtonIsDisplayed();
         }
 
         [Test]
-        public void CheckIfAboutUsButtonIsDisplayed()
+        public void CheckIfAboutUsButtonIsDisplayedTest()
         {
-            headerPage.CheckIfAboutUsButtonIsDisplayed();
+            CheckIfAboutUsButtonIsDisplayed();
         }
 
         [Test]
-        public void CheckIfBlogEntriesButtonIsDisplayed()
+        public void CheckIfBlogEntriesButtonIsDisplayedTest()
         {
-            headerPage.CheckIfBlogEntriesButtonIsDisplayed();
+            CheckIfBlogEntriesButtonIsDisplayed();
         }
 
         [Test]
-        public void CheckIfPostDetailsButtonIsDisplayed()
+        public void CheckIfPostDetailsButtonIsDisplayedTest()
         {
-            headerPage.CheckIfPostDetailsButtonIsDisplayed();
+            CheckIfPostDetailsButtonIsDisplayed();
         }
 
         [Test]
-        public void CheckIfContactUsButtonIsDisplayed()
+        public void CheckIfContactUsButtonIsDisplayedTest()
         {
-            headerPage.CheckIfContactUsButtonIsDisplayed();
+            CheckIfContactUsButtonIsDisplayed();
         }
     }
 }

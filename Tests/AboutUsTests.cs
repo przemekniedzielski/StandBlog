@@ -1,20 +1,24 @@
-﻿using Framework.Pages;
-using Framework.Header;
-using Framework.Utils;
+﻿using Framework.Utils;
 using NUnit.Framework;
+using static Framework.Header.Header;
+using static Framework.Pages.AboutUsPage;
 
 namespace Tests
 {
     public class AboutUsTests : Settings
     {
-        Header headerPage => new Header(driver);
-        AboutUsPage aboutUsPage => new AboutUsPage(driver);
+        [Test]
+        public void CheckIfAboutUsPageIsDisplayedTest()
+        {
+            ClickAboutUsButtonInHeader();
+            CheckIfAboutUsPageIsDisplayed();
+        }
 
         [Test]
-        public void CheckIfPreviousButtonIsDisplayed()
+        public void CheckIfImageInAboutUsPageIsDisplayedTest()
         {
-            headerPage.ClickAboutUs();
-            aboutUsPage.CheckIfAboutUsPageIsDisplayed();
+            ClickAboutUsButtonInHeader();
+            CheckIfImageInAboutUsPageIsDisplayed();
         }
     }
 }

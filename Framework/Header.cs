@@ -5,15 +5,8 @@ using System;
 
 namespace Framework.Header
 {
-    public class Header
+    public class Header : Settings
     {
-        private readonly IWebDriver driver;
-
-        public Header(IWebDriver webDriver)
-        {
-            driver = webDriver;
-        }
-
         //Elements
         private readonly static string Logo = "navbar-brand";
 
@@ -24,13 +17,13 @@ namespace Framework.Header
         private readonly static string ContactUs = "//a[@class='nav-link'][text()='Contact Us']";
 
         //Methods
-        public void ClickHome()
+        public static void ClickHomeButtonInHeader()
         {
             driver.FindElement(By.XPath(Home)).Click();
             Console.WriteLine("Going to 'Home' page.");
         }
 
-        public void ClickAboutUs()
+        public static void ClickAboutUsButtonInHeader()
         {
             driver.FindElement(By.XPath(AboutUs)).Click();
             Console.WriteLine("Going to 'About us' page.");
@@ -38,7 +31,7 @@ namespace Framework.Header
 
 
         //Assertions
-        public void CheckIfLogoIsDisplayed()
+        public static void CheckIfLogoIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.ClassName(Logo));
             try
@@ -51,7 +44,7 @@ namespace Framework.Header
                 Console.WriteLine("Something went wrong. Logo is not displayed correctly.");
             }
         }
-        public void CheckIfHomeButtonIsDisplayed()
+        public static void CheckIfHomeButtonIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(Home));
             try
@@ -64,7 +57,7 @@ namespace Framework.Header
                 Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
-        public void CheckIfAboutUsButtonIsDisplayed()
+        public static void CheckIfAboutUsButtonIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(AboutUs));
             try
@@ -77,7 +70,7 @@ namespace Framework.Header
                 Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
-        public void CheckIfBlogEntriesButtonIsDisplayed()
+        public static void CheckIfBlogEntriesButtonIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(BlogEntries));
             try
@@ -90,7 +83,7 @@ namespace Framework.Header
                 Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
-        public void CheckIfPostDetailsButtonIsDisplayed()
+        public static void CheckIfPostDetailsButtonIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(PostDetails));
             try
@@ -103,7 +96,7 @@ namespace Framework.Header
                 Console.WriteLine($"Something went wrong. {element.Text} is not displayed correctly.");
             }
         }
-        public void CheckIfContactUsButtonIsDisplayed()
+        public static void CheckIfContactUsButtonIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(ContactUs));
             try

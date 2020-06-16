@@ -1,61 +1,58 @@
-﻿using Framework.Header;
-using Framework.Pages;
-using Framework.Utils;
+﻿using Framework.Utils;
 using NUnit.Framework;
+using static Framework.Pages.HomePage;
 
 namespace Tests
 {
     public class HomePageTests : Settings
     {
-        HomePage homePage => new HomePage(driver);
-
         [Test]
-        public void CheckIfPreviousButtonIsDisplayed()
+        public void CheckIfPreviousButtonIsDisplayedTest()
         {
-            homePage.CheckIfPreviousButtonIsDisplayed();
+            CheckIfPreviousButtonIsDisplayed();
         }
 
         [Test]
-        public void CheckIfNextButtonIsDisplayed()
+        public void CheckIfNextButtonIsDisplayedTest()
         {
-            homePage.CheckIfNextButtonIsDisplayed();
+            CheckIfNextButtonIsDisplayed();
         }
 
         [Test]
-        public void CheckIfDownloadTemplateBannerIsDisplayed()
+        public void CheckIfDownloadTemplateBannerIsDisplayedTest()
         {
-            homePage.CheckIfDownloadTemplatePageBannerIsDisplayed();
+            CheckIfDownloadTemplatePageBannerIsDisplayed();
         }
 
         [Test]
-        public void CheckIfDownloadTemplatePageIsCorrect()
+        public void CheckIfDownloadTemplatePageIsCorrectTest()
         {
-            homePage.GoToDownloadTemplatePage();
-            homePage.CheckIfDownloadTemplatePageIsCorrect();
+            GoToDownloadTemplatePage();
+            CheckIfDownloadTemplatePageIsCorrect();
         }
 
         [Test]
-        public void CheckIfLifeStylePostIsDisplayed()
+        public void CheckIfLifeStylePostIsDisplayedTest()
         {
-            homePage.CheckIfLifestylePostIsDisplayed();
+            CheckIfLifestylePostIsDisplayed();
         }
 
         [Test]
-        public void CheckIfLifeStylePostImageIsDisplayed()
+        public void CheckIfLifeStylePostImageIsDisplayedTest()
         {
-            homePage.CheckIfLifestylePostImageIsDisplayed();
+            CheckIfLifestylePostImageIsDisplayed();
         }
 
         [Test]
-        public void CheckIfLifeStylePostTitleIsDisplayedCorrectly()
+        public void CheckIfLifeStylePostTitleIsDisplayedTest()
         {
-            homePage.CheckIfLifestylePostTitleIsDisplayedCorrectly();
+            CheckIfLifestylePostTitleIsDisplayed();
         }
 
         [Test]
-        public void CheckIfSearchFieldIsDisplayedCorrectly()
+        public void CheckIfSearchFieldIsDisplayedTest()
         {
-            homePage.CheckIfSearchFieldIsDisplayed();
+            CheckIfSearchFieldIsDisplayed();
         }
     }
 }

@@ -5,15 +5,8 @@ using System;
 
 namespace Framework.Pages
 {
-    public class HomePage
+    public class HomePage : Settings
     {
-        private readonly IWebDriver driver;
-
-        public HomePage (IWebDriver webDriver)
-        {
-            driver = webDriver;
-        }
-
         //Elements
         private readonly static string prevButton = "owl-prev";
         private readonly static string nextButton = "owl-next";
@@ -26,13 +19,13 @@ namespace Framework.Pages
 
         //Methods
 
-        public void GoToDownloadTemplatePage()
+        public static void GoToDownloadTemplatePage()
         {
             driver.FindElement(By.XPath(downloadTemplateButton)).Click();
         }
 
         //Assertions
-        public void CheckIfPreviousButtonIsDisplayed()
+        public static void CheckIfPreviousButtonIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.ClassName(prevButton));
             try
@@ -46,7 +39,7 @@ namespace Framework.Pages
             }
         }
 
-        public void CheckIfNextButtonIsDisplayed()
+        public static void CheckIfNextButtonIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.ClassName(nextButton));
             try
@@ -60,7 +53,7 @@ namespace Framework.Pages
             }
         }
 
-        public void CheckIfDownloadTemplatePageBannerIsDisplayed()
+        public static void CheckIfDownloadTemplatePageBannerIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(downloadTemplateBanner));
             try
@@ -74,7 +67,7 @@ namespace Framework.Pages
             }
         }
 
-        public void CheckIfDownloadTemplatePageIsCorrect()
+        public static void CheckIfDownloadTemplatePageIsCorrect()
         {
             string pageUrl = driver.Url;
             try
@@ -88,7 +81,7 @@ namespace Framework.Pages
             }
         }
 
-        public void CheckIfLifestylePostIsDisplayed()
+        public static void CheckIfLifestylePostIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(lifestylePost));
             try
@@ -102,7 +95,7 @@ namespace Framework.Pages
             }
         }
 
-        public void CheckIfLifestylePostTitleIsDisplayedCorrectly()
+        public static void CheckIfLifestylePostTitleIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(lifestylePostTitle));
             try
@@ -116,7 +109,7 @@ namespace Framework.Pages
             }
         }
 
-        public void CheckIfLifestylePostImageIsDisplayed()
+        public static void CheckIfLifestylePostImageIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.XPath(lifeStylePostImage));
             try
@@ -130,7 +123,7 @@ namespace Framework.Pages
             }
         }
 
-        public void CheckIfSearchFieldIsDisplayed()
+        public static void CheckIfSearchFieldIsDisplayed()
         {
             IWebElement element = driver.FindElement(By.Id(search));
             try

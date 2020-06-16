@@ -6,7 +6,7 @@ namespace Framework.Utils
 {
     public class Settings
     {
-        public IWebDriver driver { get; set; }
+        protected static IWebDriver driver { get; set; }
 
         public static string url = "http://localhost/";
 
