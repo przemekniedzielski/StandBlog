@@ -22,6 +22,7 @@ namespace Framework.Pages
         private readonly static string lifestylePost = "//div[@class='all-blog-posts']//span[text()='Lifestyle']//ancestor::div[@class='blog-post']";
         private readonly static string lifestylePostTitle = "//div[@class='all-blog-posts']//span[text()='Lifestyle']";
         private readonly static string lifeStylePostImage = "//div[@class='all-blog-posts']//span[text()='Lifestyle']//ancestor::div[@class='blog-post']//img";
+        private readonly static string search = "search_form";
 
         //Methods
         public void GoToHomePage()
@@ -130,6 +131,20 @@ namespace Framework.Pages
             catch (Exception)
             {
                 Console.WriteLine($"Something went wrong. Lifestyle post image is not displayed correctly.");
+            }
+        }
+
+        public void CheckIfSearchFieldIsDisplayed()
+        {
+            IWebElement element = driver.FindElement(By.Id(search));
+            try
+            {
+                Assert.IsTrue(element.Displayed);
+                Console.WriteLine("Search field is displayed correctly.");
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Something went wrong. Search field is not displayed correctly.");
             }
         }
     }

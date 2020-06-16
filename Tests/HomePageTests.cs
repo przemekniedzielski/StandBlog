@@ -57,5 +57,12 @@ namespace Tests
             homePage.GoToHomePage();
             homePage.CheckIfLifestylePostTitleIsDisplayedCorrectly();
         }
+
+        [Test]
+        public void CheckIfSearchFieldIsDisplayedCorrectly()
+        {
+            homePage.GoToHomePage();
+            homePage.CheckIfSearchFieldIsDisplayed();
+        }
     }
 }
