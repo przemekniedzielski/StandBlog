@@ -15,6 +15,7 @@ namespace Framework.Utils
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl(url);
         }
 
         [TearDown]

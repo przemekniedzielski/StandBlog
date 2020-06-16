@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Framework.Utils;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using System;
 
@@ -21,6 +22,19 @@ namespace Framework.Header
         private readonly static string BlogEntries = "//a[@class='nav-link'][text()='Blog Entries']";
         private readonly static string PostDetails = "//a[@class='nav-link'][text()='Post Details']";
         private readonly static string ContactUs = "//a[@class='nav-link'][text()='Contact Us']";
+
+        //Methods
+        public void ClickHome()
+        {
+            driver.FindElement(By.XPath(Home)).Click();
+            Console.WriteLine("Going to 'Home' page.");
+        }
+
+        public void ClickAboutUs()
+        {
+            driver.FindElement(By.XPath(AboutUs)).Click();
+            Console.WriteLine("Going to 'About us' page.");
+        }
 
 
         //Assertions

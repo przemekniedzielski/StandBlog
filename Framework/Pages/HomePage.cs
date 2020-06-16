@@ -7,7 +7,7 @@ namespace Framework.Pages
 {
     public class HomePage
     {
-        private static IWebDriver driver;
+        private readonly IWebDriver driver;
 
         public HomePage (IWebDriver webDriver)
         {
@@ -25,10 +25,6 @@ namespace Framework.Pages
         private readonly static string search = "search_form";
 
         //Methods
-        public void GoToHomePage()
-        {
-            driver.Navigate().GoToUrl(Settings.url);
-        }
 
         public void GoToDownloadTemplatePage()
         {
